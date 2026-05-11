@@ -1,0 +1,33 @@
+// Pair Sum Search in Array using Two Pointer Technique 
+arr = [1,2,10,5,7,3,11,15]
+target = 16
+left = 0
+right = len(arr)-1
+
+while(left < right):
+    current_sum = arr[left] + arr[right]
+
+    if(current_sum == target):
+        print("Indexes:", left, right)
+        print("Values:", arr[left], arr[right])
+        break
+    elif(current_sum < target):
+        left += 1
+    else:
+        right -= 1
+
+if(current_sum != target):
+    print("Target Not Found:", target)
+*********************************************************************************************************************************************************************************************************************
+// Reverse Array
+arr = [1,2,10,5,7,4,11,15]
+i = 0
+j = len(arr) - 1
+
+while(i <= j):
+    arr[i], arr[j] = arr[j], arr[i] #swap
+    i += 1
+    j -=1
+
+print("Reversed Array:", arr)
+*********************************************************************************************************************************************************************************************************************
